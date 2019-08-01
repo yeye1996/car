@@ -1,0 +1,872 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>Isnaider / Iventory</title>
+      <meta content="" name="description">
+      <meta content="" name="keywords">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta content="telephone=no" name="format-detection">
+      <meta name="HandheldFriendly" content="true">
+      <link rel="stylesheet" href="assets/css/master.css">
+            <!-- SWITCHER-->
+      <link href="assets/plugins/switcher/css/switcher.css" rel="stylesheet" id="switcher-css">
+      <link href="assets/plugins/switcher/css/color1.css" rel="alternate stylesheet" title="color1">
+      <link href="assets/plugins/switcher/css/color2.css" rel="alternate stylesheet" title="color2">
+      <link href="assets/plugins/switcher/css/color3.css" rel="alternate stylesheet" title="color3">
+      
+      <!--[if lt IE 9 ]>
+<meta content="no" http-equiv="imagetoolbar">
+<![endif]-->
+  </head>
+  <body class="page">
+      <!-- Loader-->
+      <div id="page-preloader"><span class="spinner border-t_second_b border-t_prim_a"></span></div>
+      <!-- Loader end-->
+    <div class="l-theme animated-css" data-header="sticky" data-header-top="200" data-canvas="container">
+        
+         <!-- Start Switcher-->
+        <div class="switcher-wrapper">
+          <div class="demo_changer">
+            <div class="demo-icon text-primary"><i class="fa fa-cog fa-spin fa-2x"></i></div>
+            <div class="form_holder">
+              <div class="predefined_styles">
+                <div class="skin-theme-switcher">
+                  <h4>Color</h4><a class="styleswitch" href="javascript:void(0);" data-switchcolor="color1" style="background-color:#e3740e;"></a><a class="styleswitch" href="javascript:void(0);" data-switchcolor="color2" style="background-color:#9e8a2b;"></a><a class="styleswitch" href="javascript:void(0);" data-switchcolor="color3" style="background-color:#28af0f;"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end switcher-->
+       
+      <!-- ==========================-->
+      <!-- SEARCH MODAL-->
+      <!-- ==========================-->
+      <div class="header-search open-search">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 offset-sm-2 col-10 offset-1">
+              <div class="navbar-search">
+                <form class="search-global">
+                  <input class="search-global__input" type="text" placeholder="Type to search" autocomplete="off" name="s" value=""/>
+                  <button class="search-global__btn"><i class="icon stroke icon-Search"></i></button>
+                  <div class="search-global__note">Begin typing your search above and press return to search.</div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="search-close close" type="button"><i class="fa fa-times"></i></button>
+      </div>
+       <!-- ==========================-->
+      <!-- MOBILE MENU-->
+      <!-- ==========================-->
+      <div data-off-canvas="mobile-slidebar left overlay">
+            <a class="navbar-brand scroll" href="home.html"><img class="scroll-logo" src="assets/media/general/logo-light.png" alt="logo" /></a>
+            
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#">Inventory</a>
+                                        <ul class="mobile-sub-menu" >
+                                            <li><a  href="inventory-listings.html">Inventory listing</a></li>
+                                            <li><a  href="inventory-grid.html">Inventory grid</a></li>
+                                            <li><a  href="vehicle-details.html">Vehicle details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="#" >Reservation</a>
+                                        <ul class="mobile-sub-menu" >
+                                           <li> <a  href="reservation-grid.html">Reservation grid</a></li>
+                                           <li> <a  href="vehicle-reservation.html">Vehicle reservation</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item "><a class="nav-link" href="#">News</a>
+                                        <ul class="mobile-sub-menu" >
+                                           <li> <a  href="blog-main.html">Blog grig</a></li>
+                                            <li><a  href="blog-main-2.html">Blog list</a></li>
+                                            <li><a  href="blog-post.html">Blog post</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item "><a class="nav-link" href="#" >Forum</a>
+                                        <ul class="mobile-sub-menu" >
+                                            <li><a  href="forum-categories.html">Forum categories</a></li>
+                                            <li><a  href="forum-main.html">Forum main</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="contacts.html" >Contacts</a></li>
+                                </ul>
+        </div>
+      <header class="header">
+        <div class="top-bar">
+          <div class="container">
+            <div class="row justify-content-between align-items-center">
+              <div class="col-auto">
+                <div class="top-bar__item"><a class="top-bar__link" href="mailto:support@domain.com"><i class="ic fas fa-envelope text-primary"></i> support@domain.com</a></div>
+                <div class="top-bar__item"><i class="ic fas fa-clock text-primary"></i> Mon to Fri : 9:00am to 6:00pm</div>
+                <div class="top-bar__item"><i class="ic fas fa-map-marker-alt text-primary"></i> Fairview Ave, El Monte, CA 91732</div>
+              </div>
+              <div class="col-auto">
+                <div class="top-bar__item"><a class="top-bar__link" href="home.html"><i class="ic fas fa-user text-primary"></i> My Account</a></div>
+                <button class="top-bar__btn"><i class="ic icon-list"></i> Add Listings</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-main">
+          <div class="container">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-auto"><a class="navbar-brand navbar-brand_light scroll" href="home.html"><img class="normal-logo" src="assets/media/general/logo-light.png" alt="logo"/></a><a class="navbar-brand navbar-brand_dark scroll" href="home.html"><img class="normal-logo" src="assets/media/general/logo-dark.png" alt="logo"/></a></div>
+              <div class="col-auto">
+                <div class="header-contacts d-none d-md-block d-lg-none d-xl-block"><i class="ic text-primary fas fa-phone"></i><span class="header-contacts__inner"><span class="header-contacts__info">Call us for help</span><a class="header-contacts__number" href="">(258) 403 7961</a></span></div>
+                <!-- Mobile Trigger Start-->
+                <button class="menu-mobile-button js-toggle-mobile-slidebar toggle-menu-button d-lg-none"><i class="toggle-menu-button-icon"><span></span><span></span><span></span><span></span><span></span><span></span></i></button>
+                <!-- Mobile Trigger End-->
+              </div>
+                <div class="col-lg d-none d-lg-block">
+                            <nav class="navbar navbar-expand-md justify-content-end" id="nav">
+                                <ul class="yamm main-menu navbar-nav">
+                                    <li class="nav-item active"><a class="nav-link" href="home.html">Home</a></li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Inventory</a>
+                                        <div class="dropdown-menu" data-aria-labelledby="navbarDropdown1">
+
+                                            <a class="dropdown-item" href="inventory-listings.html">Inventory listing</a>
+                                            <a class="dropdown-item" href="inventory-grid.html">Inventory grid</a>
+                                            <a class="dropdown-item" href="vehicle-details.html">Vehicle details</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Reservation</a>
+                                        <div class="dropdown-menu" data-aria-labelledby="navbarDropdown1">
+
+                                            <a class="dropdown-item" href="reservation-grid.html">Reservation grid</a>
+                                            <a class="dropdown-item" href="vehicle-reservation.html">Vehicle reservation</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">News</a>
+                                        <div class="dropdown-menu" data-aria-labelledby="navbarDropdown4">
+                                            <a class="dropdown-item" href="blog-main.html">Blog grig</a>
+                                            <a class="dropdown-item" href="blog-main-2.html">Blog list</a>
+                                            <a class="dropdown-item" href="blog-post.html">Blog post</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Forum</a>
+                                        <div class="dropdown-menu" data-aria-labelledby="navbarDropdown4">
+                                            <a class="dropdown-item" href="forum-categories.html">Forum categories</a>
+                                            <a class="dropdown-item" href="forum-main.html">Forum main</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="nav-item"><a class="nav-link" href="contacts.html" >Contacts</a></li>
+
+                                </ul>
+                                <span class="header-main__link btn_header_search"><i class="ic fas fa-search"></i></span>
+                            </nav>
+                        </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- end .header-->
+      <div class="section-title-page area-bg area-bg_dark area-bg_op_60">
+        <div class="area-bg__inner">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-md">
+                <h1 class="b-title-page">Inventory Grid</h1>
+                <div class="ui-decor bg-primary"></div>
+              </div>
+              <div class="col-md-auto"><a class="b-title-page__btn bg-primary" href="#">Smarter Way to Buy or Sell Cars</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end .b-title-page-->
+      
+      <div class="container text-center">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="home.html"><i class="ic text-primary fas fa-home"></i> Car Dealers</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Inventory</li>
+          </ol>
+        </nav>
+      </div>
+      <!-- end breadcrumb-->
+      
+      <div class="l-main-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-3">
+              <aside class="l-sidebar">
+                <div class="widget section-sidebar bg-gray">
+                  <h3 class="widget-title bg-dark row justify-content-between align-items-center no-gutters"><i class="ic flaticon-porsche bg-primary col-auto"></i><span class="widget-title__inner col">Search Filters</span></h3>
+                  <div class="widget-content">
+                    <div class="widget-inner">
+                      <form class="b-filter">
+                        <div class="b-filter__main">
+                          <div class="b-filter__row">
+                            <select class="selectpicker" data-width="100%" title="Select Make" multiple="multiple" data-max-options="1" data-style="ui-select">
+                              <option>Select 1</option>
+                              <option>Select 2</option>
+                              <option>Select 3</option>
+                              <option>Select 4</option>
+                            </select>
+                          </div>
+                          <div class="b-filter__row">
+                            <select class="selectpicker" data-width="100%" title="Select Model" multiple="multiple" data-max-options="1" data-style="ui-select">
+                              <option>Select 1</option>
+                              <option>Select 2</option>
+                              <option>Select 3</option>
+                              <option>Select 4</option>
+                            </select>
+                          </div>
+                          <div class="b-filter__row">
+                            <select class="selectpicker" data-width="100%" title="Vehicle Type" multiple="multiple" data-max-options="1" data-style="ui-select">
+                              <option>Select 1</option>
+                              <option>Select 2</option>
+                              <option>Select 3</option>
+                              <option>Select 4</option>
+                            </select>
+                          </div>
+                          <div class="b-filter__row">
+                            <select class="selectpicker" data-width="100%" title="Condition" multiple="multiple" data-max-options="1" data-style="ui-select">
+                              <option>Select 1</option>
+                              <option>Select 2</option>
+                              <option>Select 3</option>
+                              <option>Select 4</option>
+                            </select>
+                          </div>
+                          <div class="b-filter__row row">
+                            <div class="b-filter__item col-md-6 col-lg-12 col-xl-6">
+                              <select class="selectpicker" data-width="100%" title="From" multiple="multiple" data-max-options="1" data-style="ui-select">
+                                <option>Select 1</option>
+                                <option>Select 2</option>
+                                <option>Select 3</option>
+                                <option>Select 4</option>
+                              </select>
+                            </div>
+                            <div class="b-filter__item col-md-6 col-lg-12 col-xl-6">
+                              <select class="selectpicker" data-width="100%" title="To" multiple="multiple" data-max-options="1" data-style="ui-select">
+                                <option>Select 1</option>
+                                <option>Select 2</option>
+                                <option>Select 3</option>
+                                <option>Select 4</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="b-filter__row">
+                            <select class="selectpicker" data-width="100%" title="Transmission" multiple="multiple" data-max-options="1" data-style="ui-select">
+                              <option>Select 1</option>
+                              <option>Select 2</option>
+                              <option>Select 3</option>
+                              <option>Select 4</option>
+                            </select>
+                          </div>
+                          <div class="b-filter__row">
+                            <select class="selectpicker" data-width="100%" title="Fuel Type" multiple="multiple" data-max-options="1" data-style="ui-select">
+                              <option>Select 1</option>
+                              <option>Select 2</option>
+                              <option>Select 3</option>
+                              <option>Select 4</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="b-filter-slider ui-filter-slider">
+                          <div class="b-filter-slider__title">Filter by Price</div>
+                          <div class="b-filter-slider__main">
+                            <div id="filterPrice"></div>
+                            <div class="b-filter__row row">
+                              <div class="b-filter__item col-md-6 col-lg-12 col-xl-6">
+                                <input class="ui-select" id="input-with-keypress-0"/>
+                              </div>
+                              <div class="b-filter__item col-md-6 col-lg-12 col-xl-6">
+                                <input class="ui-select" id="input-with-keypress-1"/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="b-filter__reset btn btn-default btn-lg w-100">Apply filters</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="widget section-sidebar bg-gray">
+                  <h3 class="widget-title bg-dark row justify-content-between align-items-center no-gutters"><i class="ic flaticon-porsche bg-primary col-auto"></i><span class="widget-title__inner col">Find Installment</span></h3>
+                  <div class="widget-content">
+                    <div class="widget-inner">
+                      <form class="b-filter">
+                        <div class="b-filter__main">
+                          <div class="b-filter__row">
+                            <select class="selectpicker" data-width="100%" title="Loan Amount*" multiple="multiple" data-max-options="1" data-style="ui-select">
+                              <option>Select 1</option>
+                              <option>Select 2</option>
+                              <option>Select 3</option>
+                              <option>Select 4</option>
+                            </select>
+                          </div>
+                          <div class="b-filter__row">
+                            <select class="selectpicker" data-width="100%" title="Down Payment*" multiple="multiple" data-max-options="1" data-style="ui-select">
+                              <option>Select 1</option>
+                              <option>Select 2</option>
+                              <option>Select 3</option>
+                              <option>Select 4</option>
+                            </select>
+                          </div>
+                          <div class="b-filter__row">
+                            <select class="selectpicker" data-width="100%" title="Months Period*" multiple="multiple" data-max-options="1" data-style="ui-select">
+                              <option>Select 1</option>
+                              <option>Select 2</option>
+                              <option>Select 3</option>
+                              <option>Select 4</option>
+                            </select>
+                          </div>
+                          <div class="b-filter__row">
+                            <select class="selectpicker" data-width="100%" title="Interest Rate" multiple="multiple" data-max-options="1" data-style="ui-select">
+                              <option>Select 1</option>
+                              <option>Select 2</option>
+                              <option>Select 3</option>
+                              <option>Select 4</option>
+                            </select>
+                          </div>
+                        </div>
+                        <button class="b-filter__reset btn btn-default btn-lg w-100 mt-3">estimate now</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <!-- end .b-filter-->
+                
+              </aside>
+            </div>
+            <div class="col-xl-9">
+              <div class="b-filter-goods">
+                <div class="row align-items-center no-gutters justify-content-between">
+                  <div class="b-filter-goods__wrap col-sm-auto">
+                    <div class="b-filter-goods__select">
+                      <select class="selectpicker" data-width="170px" title="Newest First" multiple="multiple" data-max-options="1" data-style="ui-select ui-select_sm">
+                        <option>A-Z</option>
+                        <option>Z-A</option>
+                      </select>
+                    </div>
+                    <div class="b-filter-goods__select">
+                      <select class="selectpicker" data-width="142px" multiple="multiple" data-max-options="1" data-style="ui-select ui-select_sm">
+                        <option>10 Items</option>
+                        <option selected="selected">15 Items</option>
+                        <option>20 Items</option>
+                      </select>
+                    </div>
+                    <button class="b-filter-goods__btn btn" type="button">Compare<span class="badge bg-primary">2</span></button>
+                  </div>
+                  <div class="btns-switch col-auto">
+                      <a href="inventory-listings.html"><i class="btns-switch__item js-view-list  ic fa fa-th-list"></i></a>
+                      <a href="inventory-grid.html"><i class="btns-switch__item js-view-th active  ic fa fa-th"></i></a>
+                    </div>
+                </div>
+                <div class="b-filter-goods__info">Showing results 1 to 10 of total 145</div>
+              </div>
+              <!-- end .b-filter-goods-->
+              
+              <div class="section-goods">
+                <div class="b-goods-group row">
+                  <div class="col-lg-4 col-md-6">
+                    <div class="b-goods b-goods_back_sm">
+                      <button class="flip-btn"><span></span><span class="flip-btn-mdl"></span><span></span></button>
+                      <div class="flip-container">
+                        <div class="flipper">
+                          <div class="flip__front">
+                            <div class="b-goods__img"><img class="img-scale" src="assets/media/content/b-goods/294x223/1.jpg" alt="foto"/></div>
+                            <div class="b-goods__inner">
+                              <div class="b-goods__header">
+                                <div class="b-goods__name">Audi a7 2019</div>
+                                <ul class="ui-rating list-unstyled">
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li><i class="fas fa-star"></i></li>
+                                </ul>
+                                <div class="b-goods__check"><img class="img-fluid" src="assets/media/content/b-goods/check.jpg" alt="AutoCheck"/></div>
+                              </div>
+                              <div class="b-goods__info">Velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt.</div>
+                              <div class="b-goods__footer">
+                                <div class="b-goods__main-descr"><i class="ic flaticon-speedometer"></i>53,000 mi</div>
+                                <div class="b-goods__price">
+                                  <div class="b-goods__price-main bg-primary">$45,000</div>
+                                  <div class="b-goods__price-msrp">MSRP: $35,480</div>
+                                </div>
+                                <ul class="b-goods-descr list-unstyled">
+                                  <li class="b-goods-descr__item b-goods-descr__item_main"><i class="ic flaticon-speedometer"></i>53,000 mi</li>
+                                  <li class="b-goods-descr__item">2019</li>
+                                  <li class="b-goods-descr__item">Manual</li>
+                                  <li class="b-goods-descr__item">Petrol</li>
+                                  <li class="b-goods-descr__item">661 hp</li>
+                                </ul>
+                                <button class="b-goods__link text-primary" type="button">Compare</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="flip__back">
+                            <div class="b-goods__header">
+                              <div class="b-goods__name">Audi a7 2019</div>
+                              <div class="b-goods__category">Classic SUV</div>
+                              <div class="flip-btn-hide"></div>
+                            </div>
+                            <div class="b-goods-info">
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Cruise Control Option</span><span class="b-goods-info__desc col-auto">Standard</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Transmission</span><span class="b-goods-info__desc col-auto">Automatic</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Mileage</span><span class="b-goods-info__desc col-auto">48,000 km</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Engine / Fuel Capacity</span><span class="b-goods-info__desc col-auto">V8 2.5L / 8 Gal</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Vehicle Layout</span><span class="b-goods-info__desc col-auto">5 Pass, 4-Door Hatch</span></div>
+                            </div>
+                            <div class="flip__footer">
+                              <button class="btn btn-primary btn-lg w-100">Read More</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end .b-goods-->
+                    
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="b-goods b-goods_back_sm">
+                      <button class="flip-btn"><span></span><span class="flip-btn-mdl"></span><span></span></button>
+                      <div class="flip-container">
+                        <div class="flipper">
+                          <div class="flip__front">
+                            <div class="b-goods__img"><img class="img-scale" src="assets/media/content/b-goods/294x223/2.jpg" alt="foto"/></div>
+                            <div class="b-goods__inner">
+                              <div class="b-goods__header">
+                                <div class="b-goods__name">Subaru Ascent</div>
+                                <ul class="ui-rating list-unstyled">
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li><i class="fas fa-star"></i></li>
+                                </ul>
+                                <div class="b-goods__check"><img class="img-fluid" src="assets/media/content/b-goods/check.jpg" alt="AutoCheck"/></div>
+                              </div>
+                              <div class="b-goods__info">Velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt.</div>
+                              <div class="b-goods__footer">
+                                <div class="b-goods__main-descr"><i class="ic flaticon-speedometer"></i>53,000 mi</div>
+                                <div class="b-goods__price">
+                                  <div class="b-goods__price-main bg-primary">$45,000</div>
+                                  <div class="b-goods__price-msrp">MSRP: $35,480</div>
+                                </div>
+                                <ul class="b-goods-descr list-unstyled">
+                                  <li class="b-goods-descr__item b-goods-descr__item_main"><i class="ic flaticon-speedometer"></i>53,000 mi</li>
+                                  <li class="b-goods-descr__item">2019</li>
+                                  <li class="b-goods-descr__item">Manual</li>
+                                  <li class="b-goods-descr__item">Petrol</li>
+                                  <li class="b-goods-descr__item">661 hp</li>
+                                </ul>
+                                <button class="b-goods__link text-primary" type="button">Compare</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="flip__back">
+                            <div class="b-goods__header">
+                              <div class="b-goods__name">Subaru Ascent</div>
+                              <div class="b-goods__category">Classic SUV</div>
+                              <div class="flip-btn-hide"></div>
+                            </div>
+                            <div class="b-goods-info">
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Cruise Control Option</span><span class="b-goods-info__desc col-auto">Standard</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Transmission</span><span class="b-goods-info__desc col-auto">Automatic</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Mileage</span><span class="b-goods-info__desc col-auto">48,000 km</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Engine / Fuel Capacity</span><span class="b-goods-info__desc col-auto">V8 2.5L / 8 Gal</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Vehicle Layout</span><span class="b-goods-info__desc col-auto">5 Pass, 4-Door Hatch</span></div>
+                            </div>
+                            <div class="flip__footer">
+                              <button class="btn btn-primary btn-lg w-100">Read More</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end .b-goods-->
+                    
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="b-goods b-goods_back_sm">
+                      <button class="flip-btn"><span></span><span class="flip-btn-mdl"></span><span></span></button>
+                      <div class="flip-container">
+                        <div class="flipper">
+                          <div class="flip__front">
+                            <div class="b-goods__img"><img class="img-scale" src="assets/media/content/b-goods/294x223/3.jpg" alt="foto"/></div>
+                            <div class="b-goods__inner">
+                              <div class="b-goods__header">
+                                <div class="b-goods__name">Infiniti QX50</div>
+                                <ul class="ui-rating list-unstyled">
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li><i class="fas fa-star"></i></li>
+                                </ul>
+                                <div class="b-goods__check"><img class="img-fluid" src="assets/media/content/b-goods/check.jpg" alt="AutoCheck"/></div>
+                              </div>
+                              <div class="b-goods__info">Velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt.</div>
+                              <div class="b-goods__footer">
+                                <div class="b-goods__main-descr"><i class="ic flaticon-speedometer"></i>53,000 mi</div>
+                                <div class="b-goods__price">
+                                  <div class="b-goods__price-main bg-primary">$45,000</div>
+                                  <div class="b-goods__price-msrp">MSRP: $35,480</div>
+                                </div>
+                                <ul class="b-goods-descr list-unstyled">
+                                  <li class="b-goods-descr__item b-goods-descr__item_main"><i class="ic flaticon-speedometer"></i>53,000 mi</li>
+                                  <li class="b-goods-descr__item">2019</li>
+                                  <li class="b-goods-descr__item">Manual</li>
+                                  <li class="b-goods-descr__item">Petrol</li>
+                                  <li class="b-goods-descr__item">661 hp</li>
+                                </ul>
+                                <button class="b-goods__link text-primary" type="button">Compare</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="flip__back">
+                            <div class="b-goods__header">
+                              <div class="b-goods__name">Infiniti QX50</div>
+                              <div class="b-goods__category">Classic SUV</div>
+                              <div class="flip-btn-hide"></div>
+                            </div>
+                            <div class="b-goods-info">
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Cruise Control Option</span><span class="b-goods-info__desc col-auto">Standard</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Transmission</span><span class="b-goods-info__desc col-auto">Automatic</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Mileage</span><span class="b-goods-info__desc col-auto">48,000 km</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Engine / Fuel Capacity</span><span class="b-goods-info__desc col-auto">V8 2.5L / 8 Gal</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Vehicle Layout</span><span class="b-goods-info__desc col-auto">5 Pass, 4-Door Hatch</span></div>
+                            </div>
+                            <div class="flip__footer">
+                              <button class="btn btn-primary btn-lg w-100">Read More</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end .b-goods-->
+                    
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="b-goods b-goods_back_sm">
+                      <button class="flip-btn"><span></span><span class="flip-btn-mdl"></span><span></span></button>
+                      <div class="flip-container">
+                        <div class="flipper">
+                          <div class="flip__front">
+                            <div class="b-goods__img"><img class="img-scale" src="assets/media/content/b-goods/294x223/1.jpg" alt="foto"/></div>
+                            <div class="b-goods__inner">
+                              <div class="b-goods__header">
+                                <div class="b-goods__name">Audi a7 2019</div>
+                                <ul class="ui-rating list-unstyled">
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li><i class="fas fa-star"></i></li>
+                                </ul>
+                                <div class="b-goods__check"><img class="img-fluid" src="assets/media/content/b-goods/check.jpg" alt="AutoCheck"/></div>
+                              </div>
+                              <div class="b-goods__info">Velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt.</div>
+                              <div class="b-goods__footer">
+                                <div class="b-goods__main-descr"><i class="ic flaticon-speedometer"></i>53,000 mi</div>
+                                <div class="b-goods__price">
+                                  <div class="b-goods__price-main bg-primary">$45,000</div>
+                                  <div class="b-goods__price-msrp">MSRP: $35,480</div>
+                                </div>
+                                <ul class="b-goods-descr list-unstyled">
+                                  <li class="b-goods-descr__item b-goods-descr__item_main"><i class="ic flaticon-speedometer"></i>53,000 mi</li>
+                                  <li class="b-goods-descr__item">2019</li>
+                                  <li class="b-goods-descr__item">Manual</li>
+                                  <li class="b-goods-descr__item">Petrol</li>
+                                  <li class="b-goods-descr__item">661 hp</li>
+                                </ul>
+                                <button class="b-goods__link text-primary" type="button">Compare</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="flip__back">
+                            <div class="b-goods__header">
+                              <div class="b-goods__name">Audi a7 2019</div>
+                              <div class="b-goods__category">Classic SUV</div>
+                              <div class="flip-btn-hide"></div>
+                            </div>
+                            <div class="b-goods-info">
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Cruise Control Option</span><span class="b-goods-info__desc col-auto">Standard</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Transmission</span><span class="b-goods-info__desc col-auto">Automatic</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Mileage</span><span class="b-goods-info__desc col-auto">48,000 km</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Engine / Fuel Capacity</span><span class="b-goods-info__desc col-auto">V8 2.5L / 8 Gal</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Vehicle Layout</span><span class="b-goods-info__desc col-auto">5 Pass, 4-Door Hatch</span></div>
+                            </div>
+                            <div class="flip__footer">
+                              <button class="btn btn-primary btn-lg w-100">Read More</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end .b-goods-->
+                    
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="b-goods b-goods_back_sm">
+                      <button class="flip-btn"><span></span><span class="flip-btn-mdl"></span><span></span></button>
+                      <div class="flip-container">
+                        <div class="flipper">
+                          <div class="flip__front">
+                            <div class="b-goods__img"><img class="img-scale" src="assets/media/content/b-goods/294x223/2.jpg" alt="foto"/></div>
+                            <div class="b-goods__inner">
+                              <div class="b-goods__header">
+                                <div class="b-goods__name">Subaru Ascent</div>
+                                <ul class="ui-rating list-unstyled">
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li><i class="fas fa-star"></i></li>
+                                </ul>
+                                <div class="b-goods__check"><img class="img-fluid" src="assets/media/content/b-goods/check.jpg" alt="AutoCheck"/></div>
+                              </div>
+                              <div class="b-goods__info">Velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt.</div>
+                              <div class="b-goods__footer">
+                                <div class="b-goods__main-descr"><i class="ic flaticon-speedometer"></i>53,000 mi</div>
+                                <div class="b-goods__price">
+                                  <div class="b-goods__price-main bg-primary">$45,000</div>
+                                  <div class="b-goods__price-msrp">MSRP: $35,480</div>
+                                </div>
+                                <ul class="b-goods-descr list-unstyled">
+                                  <li class="b-goods-descr__item b-goods-descr__item_main"><i class="ic flaticon-speedometer"></i>53,000 mi</li>
+                                  <li class="b-goods-descr__item">2019</li>
+                                  <li class="b-goods-descr__item">Manual</li>
+                                  <li class="b-goods-descr__item">Petrol</li>
+                                  <li class="b-goods-descr__item">661 hp</li>
+                                </ul>
+                                <button class="b-goods__link text-primary" type="button">Compare</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="flip__back">
+                            <div class="b-goods__header">
+                              <div class="b-goods__name">Subaru Ascent</div>
+                              <div class="b-goods__category">Classic SUV</div>
+                              <div class="flip-btn-hide"></div>
+                            </div>
+                            <div class="b-goods-info">
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Cruise Control Option</span><span class="b-goods-info__desc col-auto">Standard</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Transmission</span><span class="b-goods-info__desc col-auto">Automatic</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Mileage</span><span class="b-goods-info__desc col-auto">48,000 km</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Engine / Fuel Capacity</span><span class="b-goods-info__desc col-auto">V8 2.5L / 8 Gal</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Vehicle Layout</span><span class="b-goods-info__desc col-auto">5 Pass, 4-Door Hatch</span></div>
+                            </div>
+                            <div class="flip__footer">
+                              <button class="btn btn-primary btn-lg w-100">Read More</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end .b-goods-->
+                    
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="b-goods b-goods_back_sm">
+                      <button class="flip-btn"><span></span><span class="flip-btn-mdl"></span><span></span></button>
+                      <div class="flip-container">
+                        <div class="flipper">
+                          <div class="flip__front">
+                            <div class="b-goods__img"><img class="img-scale" src="assets/media/content/b-goods/294x223/3.jpg" alt="foto"/></div>
+                            <div class="b-goods__inner">
+                              <div class="b-goods__header">
+                                <div class="b-goods__name">Infiniti QX50</div>
+                                <ul class="ui-rating list-unstyled">
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li class="active"><i class="fas fa-star"></i></li>
+                                  <li><i class="fas fa-star"></i></li>
+                                </ul>
+                                <div class="b-goods__check"><img class="img-fluid" src="assets/media/content/b-goods/check.jpg" alt="AutoCheck"/></div>
+                              </div>
+                              <div class="b-goods__info">Velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt.</div>
+                              <div class="b-goods__footer">
+                                <div class="b-goods__main-descr"><i class="ic flaticon-speedometer"></i>53,000 mi</div>
+                                <div class="b-goods__price">
+                                  <div class="b-goods__price-main bg-primary">$45,000</div>
+                                  <div class="b-goods__price-msrp">MSRP: $35,480</div>
+                                </div>
+                                <ul class="b-goods-descr list-unstyled">
+                                  <li class="b-goods-descr__item b-goods-descr__item_main"><i class="ic flaticon-speedometer"></i>53,000 mi</li>
+                                  <li class="b-goods-descr__item">2019</li>
+                                  <li class="b-goods-descr__item">Manual</li>
+                                  <li class="b-goods-descr__item">Petrol</li>
+                                  <li class="b-goods-descr__item">661 hp</li>
+                                </ul>
+                                <button class="b-goods__link text-primary" type="button">Compare</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="flip__back">
+                            <div class="b-goods__header">
+                              <div class="b-goods__name">Infiniti QX50</div>
+                              <div class="b-goods__category">Classic SUV</div>
+                              <div class="flip-btn-hide"></div>
+                            </div>
+                            <div class="b-goods-info">
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Cruise Control Option</span><span class="b-goods-info__desc col-auto">Standard</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Transmission</span><span class="b-goods-info__desc col-auto">Automatic</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Mileage</span><span class="b-goods-info__desc col-auto">48,000 km</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Engine / Fuel Capacity</span><span class="b-goods-info__desc col-auto">V8 2.5L / 8 Gal</span></div>
+                              <div class="b-goods-info__item row no-gutters justify-content-between"><span class="b-goods-info__title col-auto">Vehicle Layout</span><span class="b-goods-info__desc col-auto">5 Pass, 4-Door Hatch</span></div>
+                            </div>
+                            <div class="flip__footer">
+                              <button class="btn btn-primary btn-lg w-100">Read More</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end .b-goods-->
+                    
+                  </div>
+                </div>
+                <nav class="mt-3" aria-label="Page navigation example">
+                  <ul class="pagination justify-content-center">
+                    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <footer class="footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-sm-5">
+                <div class="footer-section footer-section_info">
+                  <div class="footer__title">Isnaider</div>
+                  <div class="footer__slogan">autos dealers</div>
+                  <div class="footer-info">Eipisicing elit sed do eiusmod tempor laboe dolore magna aliqa Ut enim ad minim veniam quis nostrud exercitation ullam.</div>
+                  <div class="footer-contacts">
+                    <div class="footer-contacts__item"><i class="ic fas fa-map-marker-alt text-primary"></i>Fairview Ave, El Monte, CA 91732</div>
+                    <div class="footer-contacts__item"><i class="ic fas fa-envelope text-primary"></i><a href="mailto:support@domain.com">support@domain.com</a></div>
+                    <div class="footer-contacts__item"><i class="ic far fa-clock text-primary"></i>Mon to Fri : 9:00am to 6:00pm</div><a class="footer-contacts__phone" href="">(258) 403 7961</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-7 col-sm-3">
+                <div class="row">
+                  <div class="col-md-6">
+                    <section class="footer-section footer-section_link">
+                      <h3 class="footer-section__title">About Isnaider</h3><i class="ui-decor bg-primary"></i>
+                      <ul class="footer-list list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Inventory</a></li>
+                        <li><a href="#">Parts Shop</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                      </ul>
+                    </section>
+                  </div>
+                  <div class="col-md-6">
+                    <section class="footer-section footer-section_link">
+                      <h3 class="footer-section__title">Customer Links</h3><i class="ui-decor bg-primary"></i>
+                      <ul class="footer-list list-unstyled">
+                        <li><a href="#">Latest Cars</a></li>
+                        <li><a href="#">Featured Cars</a></li>
+                        <li><a href="#">Sell Your Car</a></li>
+                        <li><a href="#">Buy a Car</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">Latest News</a></li>
+                        <li><a href="#">Car Inspection</a></li>
+                      </ul>
+                    </section>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <section class="footer-section footer-section_subscribe">
+                  <h3 class="footer-section__title">Subscribe Newsletter</h3><i class="ui-decor bg-primary"></i>
+                  <form class="footer-form">
+                    <div class="footer-form__info">Get our weekly nwsletter for latest car news exclusive offers and deals and more.</div>
+                    <div class="form-group">
+                      <input class="footer-form__input form-control" type="email" placeholder="your email">
+                    </div>
+                    <button class="btn btn-sm btn-primary">Subscribe</button>
+                  </form>
+                </section>
+              </div>
+            </div>
+            <div class="text-center">
+              <ul class="footer-soc list-unstyled">
+                <li class="footer-soc__item"><a class="footer-soc__link" href="#" target="_blank"><i class="ic fab fa-twitter"></i></a></li>
+                <li class="footer-soc__item"><a class="footer-soc__link" href="#" target="_blank"><i class="ic fab fa-facebook"></i></a></li>
+                <li class="footer-soc__item"><a class="footer-soc__link" href="#" target="_blank"><i class="ic fab fa-linkedin"></i></a></li>
+                <li class="footer-soc__item"><a class="footer-soc__link" href="#" target="_blank"><i class="ic fab fa-google-plus-g"></i></a></li>
+                <li class="footer-soc__item"><a class="footer-soc__link" href="#" target="_blank"><i class="ic fab fa-pinterest"></i></a></li>
+                <li class="footer-soc__item"><a class="footer-soc__link" href="#" target="_blank"><i class="ic fas fa-play"></i></a></li>
+              </ul>
+            </div>
+            <div class="footer-copyright">
+              Copyrights (c) 2019 ISNAIDER Auto Dealers. All rights <a href="http://www.17sucai.com">reserved</a>.
+              <a class="footer-copyright__link" href="privacy-policy.html">Privacy Policy</a>
+            </div>
+          </div>
+        </footer>
+        <!-- .footer-->
+    </div>
+    <!-- end layout-theme-->
+    
+    
+    <!-- ++++++++++++-->
+    <!-- MAIN SCRIPTS-->
+    <!-- ++++++++++++-->
+    <script src="assets/js/jquery-3.3.1.min.js" ></script>
+    <script src="assets/js/jquery-migrate-1.4.1.min.js"></script>
+    <!-- Bootstrap-->
+    <script src="assets/js/popper.min.js" ></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!---->
+    <!-- Color scheme-->
+    
+    <!-- Select customization & Color scheme-->
+    <script src="assets/js/bootstrap-select.min.js"></script>
+    <!-- Pop-up window-->
+    <script src="assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Headers scripts-->
+    <script src="assets/plugins/headers/slidebar.js"></script>
+    <script src="assets/plugins/headers/header.js"></script>
+    <!-- Mail scripts-->
+    <script src="assets/plugins/jqBootstrapValidation.js"></script>
+    <script src="assets/plugins/contact_me.js"></script>
+    <!-- Filter and sorting images-->
+    <script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
+    <script src="assets/plugins/isotope/imagesLoaded.js"></script>
+    <!-- Progress numbers-->
+    <script src="assets/plugins/rendro-easy-pie-chart/jquery.easypiechart.min.js"></script>
+    <script src="assets/plugins/rendro-easy-pie-chart/jquery.waypoints.min.js"></script>
+    <!-- Animations-->
+    <script src="assets/plugins/scrollreveal/scrollreveal.min.js"></script>
+    <!-- Scale images-->
+    <script src="assets/plugins/ofi.min.js"></script>
+    <!-- Slider number-->
+    <script src="assets/plugins/noUiSlider/wNumb.js"></script>
+    <script src="assets/plugins/noUiSlider/nouislider.min.js"></script>
+    <!-- User customization-->
+    <script src="assets/js/custom.js"></script>
+    <!-- Slider number-->
+    <script src="assets/plugins/noUiSlider/wNumb.js"></script>
+    <script src="assets/plugins/noUiSlider/nouislider.min.js"></script>
+  </body>
+</html>
